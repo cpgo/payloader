@@ -4,7 +4,7 @@ ADD ./Gemfile* $APP_HOME
 
 RUN gem install bundler
 
-ADD ./app/src/ $APP_HOME
+ADD . $APP_HOME
 RUN chown -R nobody:nogroup $APP_HOME
 USER nobody
 
