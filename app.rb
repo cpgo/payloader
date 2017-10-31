@@ -10,14 +10,13 @@ class App < Roda
       end
     end
     r.on "post" do
+      response["Content-Type"] = "application/json"
       r.post do
-        response["Content-Type"] = "application/json"
         r.params.to_json
       end
     end
     r.on "post2" do
       r.post do
-        response["Content-Type"] = "application/json"
         r.params.to_json
       end
     end
